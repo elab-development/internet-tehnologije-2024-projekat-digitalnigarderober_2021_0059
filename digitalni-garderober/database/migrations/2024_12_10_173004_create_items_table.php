@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
+            $table->string('ime');
+            $table->string('kategorija');
+            $table->string('boja');
+            $table->string('temperatura');
+            $table->string('slika');
+            $table->unsignedBigInteger('wardrobe_id');
             $table->timestamps();
+
+            $table->foreign('wardrobe_id')->references('id')->on('wardrobes')->onDelete('cascade');
         });
     }
 

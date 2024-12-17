@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,9 +20,8 @@ class OutfitFactory extends Factory
         return [
             'ime' => fake()->sentence(7), 
             'datum' => fake()->dateTimeBetween('now', '+1 year'), 
-           'temperatura' => fake()->randomElement(['coldest', 'cold', 'warm', 'hot']), 
-            'dogadjaj' => fake()->randomElement(['School', 'Party', 'Work day',
-                                                 'Casual dinner', 'Fancy dinner', 'Gym day']),
+            'temperatura' => fake()->randomElement(['coldest', 'cold', 'warm', 'hot']), 
+            'dogadjaj' => fake()->randomElement(['School', 'Party', 'Work day', 'Casual dinner', 'Fancy dinner', 'Gym day']),
             'user_id' => User::inRandomOrder()->first()->id ?? User::factory(),
         ];
     }

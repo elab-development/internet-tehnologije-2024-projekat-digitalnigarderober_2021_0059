@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Wardrobe;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,6 @@ class WardrobeSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+       Wardrobe::factory()->count(8)->create();
     }
 }

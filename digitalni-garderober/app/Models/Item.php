@@ -15,7 +15,7 @@ class Item extends Model
         'boja',
         'temperatura',
         'slika',
-        'garderober_id',
+        'wardrobe_id',
     ];
 
     public function wardrobe()

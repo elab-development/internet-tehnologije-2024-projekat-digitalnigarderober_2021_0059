@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Wardrobe;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,12 +18,12 @@ class ItemFactory extends Factory
     public function definition(): array
     {
         return [
-            'ime' => fake()->word()->unique(), // jedinstveno ime komada
+            'ime' => fake()->word(), // jedinstveno ime komada
             'kategorija' => fake()->randomElement([ 'Shirt', 'Pants', 'Skirt', 'Dress', 'Jumper', 'Footwear' ]), 
             'boja' => fake()->colorName(), 
             'temperatura' => fake()->randomElement(['coldest', 'cold', 'warm', 'hot']), 
             'slika' => fake()->imageUrl(500, 500, 'styling', true, 'clothes'),
-            'garderober_id' => Wardrobe::inRandomOrder()->first()->id ?? Wardrobe::factory(), 
+            'wardrobe_id' => Wardrobe::inRandomOrder()->first()->id ?? Wardrobe::factory(), 
         ];
     }
 }

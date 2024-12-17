@@ -13,7 +13,7 @@ class Outfit extends Model
     protected $fillable = [
         'ime',
         'datum',
-        'vremenska_prognoza',
+        'temperatura',
         'dogadjaj',
         'user_id',
     ];

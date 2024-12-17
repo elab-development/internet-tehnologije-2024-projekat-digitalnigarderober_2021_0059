@@ -17,7 +17,8 @@ class WardrobeFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'ime' => fake()->word() . ' Wardrobe', 
+            'user_id' => User::inRandomOrder()->first()->id ?? User::factory(), 
         ];
     }
 }

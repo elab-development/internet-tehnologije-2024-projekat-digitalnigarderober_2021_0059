@@ -17,7 +17,12 @@ class OutfitFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'ime' => fake()->sentence(7), 
+            'datum' => fake()->dateTimeBetween('now', '+1 year'), 
+           'temperatura' => fake()->randomElement(['coldest', 'cold', 'warm', 'hot']), 
+            'dogadjaj' => fake()->randomElement(['School', 'Party', 'Work day',
+                                                 'Casual dinner', 'Fancy dinner', 'Gym day']),
+            'user_id' => User::inRandomOrder()->first()->id ?? User::factory(),
         ];
     }
 }

@@ -11,12 +11,13 @@ class Outfit extends Model
     use HasFactory;
 
     protected $fillable = [
-        'ime'=>$this->ime,
-        'datum'=>$this->datum,
-        'temperatura'=>$this->temperatura,
-        'dogadjaj'=>$this->dogadjaj,
-        'user_id'=>$this->user_id,
-    ];
+        'ime',
+        'datum',
+        'temperatura',
+        'dogadjaj',
+        'user_id'];
+       
+    
 
     public function user()
     {

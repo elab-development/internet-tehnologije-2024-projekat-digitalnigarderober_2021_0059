@@ -15,13 +15,14 @@ class OutfitResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-        'ime',
-        'datum',
-        'temperatura',
-        'dogadjaj',
-        'user_id'
+            'ime'=>$this->ime,
+            'datum'=>$this->datum,
+            'temperatura'=>$this->temperatura,
+            'dogadjaj'=>$this->dogadjaj,
+            'user_id'=>$this->user_id,
+        ];
 
             
-        ];
+        ;
     }
 }

@@ -1,0 +1,4 @@
+digitalni-garderober/database/factories/WardrobeFactory.php
+digitalni-garderober/database/factories/UserFactory.php
+digitalni-garderober/database/factories/OutfitFactory.php
+digitalni-garderober/database/factories/ItemFactory.php

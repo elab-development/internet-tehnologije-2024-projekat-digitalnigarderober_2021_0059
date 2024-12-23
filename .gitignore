@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /.phpunit.cache
 /node_modules
 /public/build
@@ -20,3 +21,9 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+=======
+digitalni-garderober/database/factories/WardrobeFactory.php
+digitalni-garderober/database/factories/UserFactory.php
+digitalni-garderober/database/factories/OutfitFactory.php
+digitalni-garderober/database/factories/ItemFactory.php
+>>>>>>> 61088969de7e1246ac4f0af9f85763e6fcc793fa
